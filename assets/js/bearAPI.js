@@ -5,7 +5,7 @@ $.ajaxPrefilter((option) => {
     option.headers = { Authorization: localStorage.getItem("token") };
   }
   option.complete = (res) => {
-    console.log(res);
+    // console.log(res);
     if (
       res.responseJSON.status === 1 &&
       res.responseJSON.message === "身份认证失败！"

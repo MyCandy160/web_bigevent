@@ -5,14 +5,14 @@ function getUserInfo() {
     success: (res) => {
       // console.log(res);
       const { data, status, message } = res;
-      if (status !== 0) return layer.msg(message);
-      layer.msg(message);
+      if (status !== 0) return layer.msg("用户登录失败");
+      layer.msg("成功登录");
       renderAvatar(data);
     },
   });
 }
 const renderAvatar = (uers) => {
-  console.log(uers);
+  // console.log(uers);
   let uname = uers.nickname || uers.username;
   $("#welcome").html(`欢迎${uname}`);
   if (uers.user_pic !== null) {
