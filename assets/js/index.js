@@ -31,3 +31,6 @@ $("#deleteBtnOut").click(() => {
   });
 });
 getUserInfo();
+function chengeClass() {
+  $("#classChange").attr("class", "layui-this").next().attr("class", "");
+}
